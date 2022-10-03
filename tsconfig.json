@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
     "target": "es5",
     "lib": [
       "dom",
@@ -21,7 +22,8 @@
     "paths":{
       "@common":["framework/common"],
       "@common/*":["framework/common/*"],
-      "@framework":[""]
+      "@framework":["framework/shopify"],
+      "@framework/*":["framework/shopify/*"]
     }
   }, 
   "include": [
