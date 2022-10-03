@@ -10,9 +10,9 @@ type ReturnType ={
 const getAllProducts = async ():Promise<Product[]>=>{
     const {data} = await fetchApi<ReturnType>({query:getAllProductQuery});
     //normalize and return new data!
-    const products = data.products.edges.map(({node : product})=>{
-        normalizeProduct(product);
-    }) ?? []
+    const products = data.products.edges.map(({node : product})=>
+        normalizeProduct(product)
+    ) ?? []
     return products;
 }
 
