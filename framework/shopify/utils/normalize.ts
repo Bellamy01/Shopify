@@ -30,4 +30,6 @@ const product = {
     images:normalizeProductImages(imageConnection),
     ...rest
     }
+
+    return product;
 }
