@@ -1,3 +1,3 @@
 module.exports = {
-    test: "shop"
+    test: "shopify-unique-settings"
 }
