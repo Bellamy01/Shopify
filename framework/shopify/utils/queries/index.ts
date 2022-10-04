@@ -1,4 +1,1 @@
-
-
-
-export {default} from "./fetch-api";
+export * from './get-all-products';
