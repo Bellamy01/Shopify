@@ -10,8 +10,8 @@ type ReturnType ={
     products: ProductConnection
 }
 
-const getAllProducts = async ():Promise<Product[]>=>{
-    const {data} = await config.fetchApi<ReturnType>({
+const getAllProducts = async (config:ApiConfig):Promise<Product[]>=>{
+    const {data} = await config.fetch<ReturnType>({
         url:config.apiUrl,
         query:getAllProductQuery});
     //normalize and return new data!
