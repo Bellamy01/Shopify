@@ -17,11 +17,8 @@ function withFrameworkConfig(defaultConfig={}){
     fs.writeFileSync(
         tsPath,
         prettier.format(
-            JSON.stringify(
-            tsConfig,{parser:"json"}
-            )
+            JSON.stringify(tsConfig),{ parser : "json" }
         )
-        
     );
 
     
