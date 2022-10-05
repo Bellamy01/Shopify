@@ -4,7 +4,7 @@ const fs = require("fs");
 const prettier = require('prettier');
 
 
-const ALLOWED_FW = ["shopify","bigcommerce"];
+const ALLOWED_FW = ["shopify","bigcommerce","shopify_local"];
 
 function withFrameworkConfig(defaultConfig={}){
     const framework = defaultConfig?.framework?.name;
@@ -18,7 +18,7 @@ function withFrameworkConfig(defaultConfig={}){
         The api framework: ${framework} can't be found
         Please use one of ${ALLOWED_FW.join(", ")}`)
     }
-
+    if()
 
     const frameworkNextConfig = require(path.join("../",framework,"next.config"));
     const config = merge(defaultConfig, frameworkNextConfig);
