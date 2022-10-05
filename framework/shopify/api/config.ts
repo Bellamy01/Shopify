@@ -1,4 +1,5 @@
 import { fetchApi } from "@framework/utils";
+import { config } from "process";
 
 class Config {
     private config: any 
@@ -12,5 +13,10 @@ class Config {
 }
 
 const configWrapper = new Config({
-    apiUrl:"http://local"
+    apiUrl:"http://localhost:4000/graphql",
+    fetch: fetchApi
 })
+
+export function getConfig(){
+    return configWrapper.getConfig()
+}
