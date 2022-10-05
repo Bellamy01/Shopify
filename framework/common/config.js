@@ -4,13 +4,16 @@ const fs = require("fs");
 const prettier = require('prettier');
 
 
-const ALLOWED_FW : string[] = ["shopify",""]
+const ALLOWED_FW = ["shopify","bigcommerce"];
 
 function withFrameworkConfig(defaultConfig={}){
     const framework = defaultConfig?.framework?.name;
+    
     if(!framework){
         throw new Error("The api framework is missing, please add a valid [provider!");
     } 
+
+    
     const frameworkNextConfig = require(path.join("../",framework,"next.config"));
     const config = merge(defaultConfig, frameworkNextConfig);
     const tsPath = path.join(process.cwd(),"tsconfig.json");
