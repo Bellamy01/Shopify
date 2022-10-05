@@ -3,7 +3,7 @@ export type ApiFetcherOptions = {
     query:string
 }
 
-export type ApiFetcheResults = {
+export type ApiFetcheResults<T> = {
     data : T
 }
 export interface ApiConfig {
