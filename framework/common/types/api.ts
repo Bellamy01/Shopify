@@ -3,6 +3,9 @@ export type ApiFetcherOptions = {
     query:string
 }
 
+export type ApiFetcheResults = {
+    data : T
+}
 export interface ApiConfig {
     apiUrl: string,
     fetch<T>(
