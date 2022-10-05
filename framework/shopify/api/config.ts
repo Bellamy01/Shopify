@@ -1,3 +1,5 @@
 import { fetchApi } from "@framework/utils";
 
-class Co
+class Config {
+    
+}
