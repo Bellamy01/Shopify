@@ -18,8 +18,8 @@ function withFrameworkConfig(defaultConfig={}){
         tsPath,
         prettier.format(
             JSON.stringify(
-            tsConfig,null,2
-        )
+            tsConfig,{parser:"json"}
+            )
         )
         
     );
