@@ -3,6 +3,9 @@ const merge = require("deepmerge");
 const fs = require("fs");
 const prettier = require('prettier');
 
+
+const ALLOWED_FW : string[] = ["shopify",""]
+
 function withFrameworkConfig(defaultConfig={}){
     const framework = defaultConfig?.framework?.name;
     if(!framework){
