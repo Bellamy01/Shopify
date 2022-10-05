@@ -12,7 +12,7 @@ function withFrameworkConfig(defaultConfig={}){
 
     const tsConfig = require(path.join(process.cwd(),"tsconfig.json"));
     tsConfig.compilerOptions.paths["@framework"] = [`framework/${framework}`];
-    tsConfig.compilerOptions.paths["@framework/*"] = [`framework/${framework}`];    //current working directory
+    tsConfig.compilerOptions.paths["@framework/*"] = [`framework/${framework}/*`];    //current working directory
     
     fs.writeFileSync(tsPath,
         JSON.stringify(
