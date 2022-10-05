@@ -1,7 +1,7 @@
 const path = require("path");
 const merge = require("deepmerge");
 const fs = require("fs");
-const prettier = require('')
+const prettier = require('prettier');
 
 function withFrameworkConfig(defaultConfig={}){
     const framework = defaultConfig?.framework.name;
