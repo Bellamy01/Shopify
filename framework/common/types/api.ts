@@ -1,8 +1,11 @@
-
+export type ApiFetcherOptions = {
+    url:string,
+    query:string
+}
 
 export interface ApiConfig {
     apiUrl: string,
     fetch<T>(
-        options
-    ): Promise<Y>
+        options : ApiFetcherOptions
+    ): Promise<{data:T}>
 }
