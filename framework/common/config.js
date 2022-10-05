@@ -10,7 +10,7 @@ function withFrameworkConfig(defaultConfig={}){
     const framework = defaultConfig?.framework?.name;
     
     if(!framework){
-        throw new Error("The api framework is missing, please add a valid [provider!");
+        throw new Error("The api framework is missing, please add a valid provider!");
     } 
 
     if(!ALLOWED_FW.includes(framework)){
@@ -18,7 +18,7 @@ function withFrameworkConfig(defaultConfig={}){
         The api framework: ${framework} can't be found
         Please use one of ${ALLOWED_FW.join(", ")}`)
     }
-    
+
 
     const frameworkNextConfig = require(path.join("../",framework,"next.config"));
     const config = merge(defaultConfig, frameworkNextConfig);
