@@ -5,10 +5,11 @@ const prettier = require('prettier');
 
 
 const ALLOWED_FW = ["shopify","bigcommerce","shopify_local"];
+const FALLBACK_FW = "shopify";
 
 function withFrameworkConfig(defaultConfig={}){
     const framework = defaultConfig?.framework?.name;
-    const ALLOWED_FW
+    
     if(!framework){
         throw new Error("The api framework is missing, please add a valid provider!");
     } 
