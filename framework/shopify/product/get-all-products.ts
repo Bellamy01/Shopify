@@ -4,7 +4,7 @@ import { ProductConnection } from "../schema";
 import { normalizeProduct} from "../utils/normalize";
 import { Product } from "@common/types/product";
 import {ApiConfig} from "@common/types/api";
-import { config } from "process";
+
 
 type ReturnType ={
     products: ProductConnection

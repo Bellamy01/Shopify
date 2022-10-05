@@ -9,7 +9,7 @@ const fetchApi =async <T>({
     url,
     query}: ApiFetcherOptions
     ): Promise< ApiFetcheResults<T> >=>{
-    const url = "http://localhost:4000/graphql";
+
     const res = await fetch(url,{
         method:"POST",
         headers:{
