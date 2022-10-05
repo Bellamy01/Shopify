@@ -14,7 +14,8 @@ function withFrameworkConfig(defaultConfig={}){
     } 
 
     if(!ALLOWED_FW.includes(framework)){
-        throw new Error(`The api framework: ${framework}`)
+        throw new Error(`The api framework: ${framework} can't be found
+        please use one of ${ALLOWED_FW.join(",")}`)
     }
 
     const frameworkNextConfig = require(path.join("../",framework,"next.config"));
