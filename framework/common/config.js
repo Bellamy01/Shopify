@@ -8,7 +8,7 @@ const ALLOWED_FW = ["shopify","bigcommerce","shopify_local"];
 
 function withFrameworkConfig(defaultConfig={}){
     const framework = defaultConfig?.framework?.name;
-    
+    const ALLOWED_FW
     if(!framework){
         throw new Error("The api framework is missing, please add a valid provider!");
     } 
@@ -19,7 +19,7 @@ function withFrameworkConfig(defaultConfig={}){
         Please use one of ${ALLOWED_FW.join(", ")}`)
     }
     if(framework === "shopify_local"){
-        framework = shopify;
+        framework = ALLOWED_FW[0];
     }
 
     const frameworkNextConfig = require(path.join("../",framework,"next.config"));
