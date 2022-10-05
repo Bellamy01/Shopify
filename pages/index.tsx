@@ -4,8 +4,6 @@ import getAllProducts from "@framework/product/get-all-products";
 import { getConfig } from "@framework/api/config";
 export async function getStaticProps() {
   const config = getConfig();
-  console.log(config.fetch);
-  
   const products = await getAllProducts();
   return {  
     props:{
