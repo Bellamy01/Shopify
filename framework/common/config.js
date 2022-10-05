@@ -1,7 +1,7 @@
 const path = require("path");
 const merge = require("deepmerge");
 const fs = require("fs");
-
+const prettier = require('')
 
 function withFrameworkConfig(defaultConfig={}){
     const framework = defaultConfig?.framework.name;
@@ -14,7 +14,9 @@ function withFrameworkConfig(defaultConfig={}){
     tsConfig.compilerOptions.paths["@framework"] = [`framework/${framework}`];
     tsConfig.compilerOptions.paths["@framework/*"] = [`framework/${framework}/*`];    //current working directory
     
-    fs.writeFileSync(tsPath,
+    fs.writeFileSync(
+        tsPath,
+
         JSON.stringify(
             tsConfig,null,2
         )
