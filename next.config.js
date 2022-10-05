@@ -2,7 +2,7 @@
 const { withFrameworkConfig } = require("./framework/common/config"); 
 module.exports = withFrameworkConfig({
   framework:{
-    name:"shopify"
+    name:"sy"
   },
   i18n:{
     locales:["en-US","es"],

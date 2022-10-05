@@ -16,7 +16,7 @@ function withFrameworkConfig(defaultConfig={}){
     if(!ALLOWED_FW.includes(framework)){
         throw new Error(`
         The api framework: ${framework} can't be found
-        Please use one of [${ALLOWED_FW.join(", ")}]`)
+        Please use one of ${ALLOWED_FW.join(", ")}`)
     }
 
 
