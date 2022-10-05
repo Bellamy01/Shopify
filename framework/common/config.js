@@ -16,10 +16,12 @@ function withFrameworkConfig(defaultConfig={}){
     
     fs.writeFileSync(
         tsPath,
-
-        JSON.stringify(
+        prettier.format(
+            JSON.stringify(
             tsConfig,null,2
         )
+        )
+        
     );
 
     
