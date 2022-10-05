@@ -27,10 +27,10 @@
         "framework/common/*"
       ],
       "@framework": [
-        "framework/shopify"
+        "framework/bigcommerce"
       ],
       "@framework/*": [
-        "framework/shopify"
+        "framework/bigcommerce"
       ]
     }
   },
