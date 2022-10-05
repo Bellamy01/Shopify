@@ -4,7 +4,7 @@ const fs = require("fs");
 const prettier = require('prettier');
 
 function withFrameworkConfig(defaultConfig={}){
-    const framework = defaultConfig?.framework.name;
+    const framework = defaultConfig?.framework?.name;
     if(!framework){
         throw new Error("The api framework is missing");
     } 
