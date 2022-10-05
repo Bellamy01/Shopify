@@ -1,6 +1,5 @@
 
-const getAllProducts = async ():Promise<any[]>=>{
-   
+const getAllProducts = async ():Promise<any>=>{
     return {};
 }
 
