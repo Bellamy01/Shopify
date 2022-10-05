@@ -6,7 +6,7 @@ const prettier = require('prettier');
 function withFrameworkConfig(defaultConfig={}){
     const framework = defaultConfig?.framework.name;
     if(!framework){
-        throw new Error("The api framework is missing")
+        throw new Error("The api framework is missing");
     } 
     const frameworkNextConfig = require(path.join("../",framework,"next.config"));
     const config = merge(defaultConfig, frameworkNextConfig);
