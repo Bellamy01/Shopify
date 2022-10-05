@@ -30,7 +30,7 @@
         "framework/shopify"
       ],
       "@framework/*": [
-        "./framework/shopify"
+        "framework/shopify"
       ]
     }
   },
