@@ -23,6 +23,6 @@ export default function Home({
       {JSON.stringify(products)}
     </div>
   )
-}
+} 
 
-Home.Layout = Layout;
+Home.Layout = Layout; 
