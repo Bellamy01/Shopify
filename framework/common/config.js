@@ -4,7 +4,7 @@ const fs = require("fs");
 
 
 function withFrameworkConfig(defaultConfig={}){
-    const framework = "shopify";
+    const framework = "bigc";
 
     const frameworkNextConfig = require(path.join("../",framework,"next.config"));
     const config = merge(defaultConfig, frameworkNextConfig);
