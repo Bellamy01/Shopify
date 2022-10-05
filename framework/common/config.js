@@ -20,7 +20,7 @@ function withFrameworkConfig(defaultConfig={}){
         Please use one of ${ALLOWED_FW.join(", ")}`)
     }
     if(framework === "shopify_local"){
-        framework = ALLOWED_FW[0];
+        framework = FALLBACK_FW;
     }
 
     const frameworkNextConfig = require(path.join("../",framework,"next.config"));
