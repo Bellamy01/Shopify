@@ -1,5 +1,5 @@
 .root{
-    @apply h-full p-10 mx-auto;
-    max-width: 2460px;
-    background-color: theme("colors.green");
+    @apply bg-primary max-w-[2460px] h-full p-10 mx-auto;
+    background-color: theme("colors.blue");
+    color:theme("textColor.base");
 }
