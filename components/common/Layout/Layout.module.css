@@ -1,3 +1,5 @@
 .root{
-    @apply h-full p-10;
+    @apply h-full p-10 mx-auto;
+    max-width: 2460px;
+    background-color: var(--green);
 }
