@@ -19,7 +19,7 @@ const Grid:FC<Props> = ({
     )
     
     return (
-        <div className={s.root}>
+        <div className={rootClassName}>
             {children}
         </div>
     )
