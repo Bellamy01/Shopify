@@ -1,5 +1,3 @@
 .root{
     @apply bg-primary max-w-[2460px] h-full p-10 mx-auto;
-    background-color: theme("colors.blue");
-    color:theme("textColor.base");
 }
