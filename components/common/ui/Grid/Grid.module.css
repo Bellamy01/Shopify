@@ -2,3 +2,7 @@
 .root{
     @apply grid gap-2 grid-cols-3 grid-rows-2;
 }
+
+.root > *{
+    @apply row-span-1;
+}
