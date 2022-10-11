@@ -1,6 +1,6 @@
 import {FC} from "react";
 import s from "./Hero.module.scss";
-import Link from  
+import Link from  "next/link";
 
 interface Props{
     headline: string,
@@ -11,13 +11,18 @@ const Hero : FC<Props> = ({headline,description})=>{
     return (
         <div className="bg-black">
             <div className={s.root}>
-                <h2>
+                <h2 className={s.headline}>
                     {headline}
                 </h2>
+                <div>
+                    <p className={s.description}>
+                    {description}
+                </p>
+                <Link href="/">
+                    <a className={s.link}>Read it here</a>
+                </Link>
+                </div>
             </div>
-            <p>
-                {description}
-            </p>
         </div>
     )
 }
