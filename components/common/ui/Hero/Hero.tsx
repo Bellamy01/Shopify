@@ -16,7 +16,7 @@ const Hero : FC<Props> = ({headline,description})=>{
                 <h2 className={s.headline}>
                     {headline}
                 </h2>
-                <div className="flex-1 max-w-4xl">
+                <div className="flex-1 max-w-4xl pl-4">
                     <p className={s.description}>
                     {description}
                 </p>
