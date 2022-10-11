@@ -1,9 +1,9 @@
 import classNames from "classnames";
-import {FC, ReactNode} from "react";
+import {FC, ReactNode, HTMLAttributes,ComponentType} from "react";
 
 interface Props{
     children: ReactNode | ReactNode[]
-    el?:any
+    el?:ComponentType<HTMLAttributes<HTMLElement>>
 }
 
 const Container: FC<Props> = ({children,el:Component = "div"})=>{
