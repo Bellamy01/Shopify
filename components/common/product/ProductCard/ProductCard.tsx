@@ -4,7 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import s from "./ProductCard.module.scss";
 interface Props {
-    product: Product
+    product: Product,
+    variant: "simple" | "slim"
 }
 const placeholderImage = "/product-image-placeholder.svg";
 

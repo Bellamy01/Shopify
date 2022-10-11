@@ -5,7 +5,7 @@ import { getConfig } from "@framework/api/config";
 import { Layout } from "@components/common";
 import { ProductCard } from "@components/common/product/ProductCard";
 import Link from "next/link";
-import { Grid } from "@components/common/ui";
+import { Grid, Marquee } from "@components/common/ui";
 import {Hero} from "@components/common/ui";
 export async function getStaticProps() {
   const config = getConfig();
@@ -35,6 +35,14 @@ export default function Home({
         headline= "Coffee, icecream and water melon"
         description="Ice cream is a mixture of milk, cream, sugar, and sometimes other ingredients that has been frozen into a soft, creamy delight using special techniques. Ice cream has been a popular treat for hundreds of years but has only become commonplace since the widespread use of refrigeration. The exploding popularity of ice cream has led to a number of ice-cream variations including frozen custard, frozen yogurt, and even non-dairy versions made with ingredients like coconut milk."
       />
+      <Marquee>
+        {products.slice(0,3).map(product =>
+        <ProductCard
+          key={product.id}
+          product={product}
+        />  
+        )}
+      </Marquee>
     </>
   )
 } 
