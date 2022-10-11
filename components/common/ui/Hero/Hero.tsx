@@ -1,6 +1,7 @@
 import {FC} from "react";
 import s from "./Hero.module.scss";
 import Link from  "next/link";
+import Container from "../Container";
 
 interface Props{
     headline: string,
@@ -10,6 +11,7 @@ interface Props{
 const Hero : FC<Props> = ({headline,description})=>{
     return (
         <div className="bg-black">
+            <Container>
             <div className={s.root}>
                 <h2 className={s.headline}>
                     {headline}
@@ -23,6 +25,7 @@ const Hero : FC<Props> = ({headline,description})=>{
                 </Link>
                 </div>
             </div>
+            </Container>
         </div>
     )
 }
