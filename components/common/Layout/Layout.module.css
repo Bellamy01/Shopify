@@ -1,3 +1,4 @@
 .root{
-    @apply bg-primary max-w-[2460px] h-full;
+    @apply bg-primary max-w-[2460px] h-full px-6 mx-auto;
+
 }

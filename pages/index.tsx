@@ -32,8 +32,10 @@ export default function Home({
       )}
       </Grid>
       <Hero
-        headline= "Hi there"
-        description="Hello"
+        headline= "Hi theressggggggggggggg"
+        description="Hellogblieie; egbu;o gebo;ugegbue;igebeigbege;bgege;v
+        ebegbeve;bvev;ebebebve;vnebve;ubvevb;evbevbu;ievbe;vegbevbe;beve
+        b;veubve;vubigerrrrrrrrrrrrrrrrrrrgeprineong"
       />
     </>
   )
