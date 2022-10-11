@@ -1,5 +1,6 @@
 .root{
-    @apply relative max-h-full;
+    @apply relative;
+    max-height: 100% !important;
 
     &:hover{
     & .productBg::before{
@@ -25,14 +26,14 @@
 }
 
 .productImage{
-    @apply transition-transform duration-1000 block;
+    @apply transition-transform duration-500 block;
 }
 .productBg{
     @apply absolute inset-0 z-0;
     background-color: #212529;
 }
 .productBg::before{
-    @apply transition-transform duration-1000 block h-full w-full bg-repeat-space;
+    @apply transition-transform duration-500 block h-full w-full bg-repeat-space;
     content:"";
     background-image: url("/product-pattern-bg.svg");
 }
