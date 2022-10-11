@@ -6,7 +6,7 @@ import { Layout } from "@components/common";
 import { ProductCard } from "@components/common/product/ProductCard";
 import Link from "next/link";
 import { Grid } from "@components/common/ui";
-
+import {Hero} from "@components/common/ui";
 export async function getStaticProps() {
   const config = getConfig();
   const products = await getAllProducts(config );
@@ -31,6 +31,10 @@ export default function Home({
         />  
       )}
       </Grid>
+      <Hero
+        headline= "Hi there"
+        description="Hello"
+      />
     </>
   )
 } 
