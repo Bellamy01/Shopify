@@ -13,5 +13,13 @@
 }
 
 .loop{
-    
+    animation-name:slide;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    position: relative;
+}
+@keyframes slide {
+    from{right:0}
+    to{right:100%}
 }
