@@ -11,11 +11,14 @@ interface Props {
     children: ReactNode[]
 }
 const Layout: FC<Props> = ({children})=>{
-    const ui = useUI();
+    const {isSideBarOpen,closeSideBar} = useUI();
     return (
         <div className={s.root}>
         <NavBar/>
-        <SideBar isOpen={ui.isSideBarOpen}>
+        <SideBar 
+            onClose={closeSideBar}
+            isOpen={isSideBarOpen}
+        >
         <CartSide/>
         </SideBar>
         <main className="fit">

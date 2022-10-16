@@ -33,14 +33,13 @@ export const UIProvider:FC<Props>= ({children})=>{
     const openSideBar = ()=>alert("Opening SideBar");
     const closeSideBar = ()=>alert("Closing SideBar");
 
-    const [isSideBarOpen,setSideBarOpen] = useState(false);
-    const uiState = {
-        isSideBarOpen,
-        setSideBarOpen,
+    const value = {
+        openSideBar,
+        closeSideBar,
         isSideBarOpen: false
     }
     return(
-        <UIContext.Provider value={uiState}>
+        <UIContext.Provider value={value}>
             {children}
         </UIContext.Provider>
     )
