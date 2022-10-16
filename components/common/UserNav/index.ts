@@ -1,1 +1,1 @@
-export {default} as 
+export {default} from "./UserNav";
