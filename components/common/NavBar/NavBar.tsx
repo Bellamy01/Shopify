@@ -1,12 +1,16 @@
 import {FC} from "react";
 import { Container } from "@components/common/ui";
+import Link from "next/link";
+import s from "./NavBar.module.scss";
 
 const NavBar = ()=>{
     return(
         <Container>
-            <div className="flex flex-row md:py-6">
-                <h1 className="uppercase">bel store</h1>
-            </div>
+            <div className={s.root}>
+                <div className={s.main}>
+
+                </div>
+                
         </Container>
     )
 }
