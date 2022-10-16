@@ -18,7 +18,7 @@ const ProductCard: FC<Props> = ({product,variant= "simple"})=> {
                 {
                     variant === "slim" ? 
                     <>
-                        <div className="inset-0     flex items-center justify-center absolute z-20">
+                        <div className="inset-0 flex items-center justify-center absolute z-20">
                             <span className="bg-black text-white p-3 font-bold text-xl">
                                 {product.name}
                             </span>
@@ -28,10 +28,11 @@ const ProductCard: FC<Props> = ({product,variant= "simple"})=> {
                             className={s.productImage}
                             alt={product.name ?? "Product image"}
                             src={product.images[0].url ?? placeholderImage}
-                            height = {300}
-                            width = {300}
+                            height = {280}
+                            width = {280}
                             quality = "85"
                             layout = "responsive"
+                            SI
                             />
                         )}
                     </> : (
