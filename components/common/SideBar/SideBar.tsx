@@ -1,5 +1,5 @@
 import { FC,useEffect,useRef } from 'react'
-import { disableBodyScroll ,enableBodyScroll, clearAllBodyScrollLocks} from "body-scroll-lock";
+import { disableBodyScroll ,enableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
 interface Props {
   children: any,
   isOpen:boolean,
