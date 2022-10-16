@@ -16,11 +16,6 @@ export const UIProvider:FC<Props>= ({children})=>{
         isSideBarOpen,
         setSideBarOpen
     }
-    {
-        uiState:{
-            isSideBarOpen;
-        }
-    }
     return(
         <UIContext.Provider value={{uiState}}>
             {children}

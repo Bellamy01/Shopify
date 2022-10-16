@@ -2,6 +2,7 @@ import { FC } from "react";
 import s from "./UserNav.module.scss";
 import Link from "next/link";
 import {Bag as Cart, Heart} from "@components/icons";
+import { useUI } from "@components/cart/CartSide";
 
 const UserNav:FC = ()=>{
     return (
