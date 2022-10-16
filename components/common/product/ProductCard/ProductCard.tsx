@@ -28,8 +28,8 @@ const ProductCard: FC<Props> = ({product,variant= "simple"})=> {
                             className={s.productImage}
                             alt={product.name ?? "Product image"}
                             src={product.images[0].url ?? placeholderImage}
-                            height = {320}
-                            width = {320}
+                            height = {300}
+                            width = {300}
                             quality = "85"
                             layout = "responsive"
                             />
@@ -48,8 +48,8 @@ const ProductCard: FC<Props> = ({product,variant= "simple"})=> {
                             className={s.productImage}
                             alt={product.name ?? "Product image"}
                             src={product.images[0].url ?? placeholderImage}
-                            height = {320}
-                            width = {320}
+                            height = {300}
+                            width = {300}
                             quality = "85"
                             layout = "responsive"
                             />
