@@ -13,14 +13,17 @@
 }
 
 .loop{
-    animation-name:slide;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-play-state: running;
-    animation-fill-mode: backwards;
-    position: relative;
+    animation: slide 5s linear infinite;
+    offset:10vh;
+}
+.loop:hover{
+    animation-play-state: paused;
 }
 @keyframes slide {
-    from{right:0}
-    to{right:100%}
+    0%{
+        transform: translateX(0);
+    }    
+    100%{
+        transform:translateX(calc(-250px*9));
+    }
 }
