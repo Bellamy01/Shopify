@@ -12,8 +12,6 @@ interface Props {
 }
 const Layout: FC<Props> = ({children})=>{
     const ui = useUI();
-    console.log(ui);
-    
     return (
         <div className={s.root}>
         <NavBar/>

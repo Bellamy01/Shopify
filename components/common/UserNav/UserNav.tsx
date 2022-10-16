@@ -5,6 +5,7 @@ import {Bag as Cart, Heart} from "@components/icons";
 import { useUI } from "@components/common/ui/Context";
 
 const UserNav:FC = ()=>{
+    const ui = useUI();
     return (
         <nav>
             <ul className={s.item}>
