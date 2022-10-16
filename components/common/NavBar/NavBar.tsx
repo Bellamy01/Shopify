@@ -1,6 +1,7 @@
 import {FC} from "react";
 import { Container } from "@components/common/ui";
 import Link from "next/link";
+import { UserNav } from "@components/common";
 import s from "./NavBar.module.scss";
 
 const NavBar = ()=>{
@@ -27,6 +28,9 @@ const NavBar = ()=>{
                         <a className={s.link}>Shoes</a>
                     </Link>
                 </nav>
+                <div className="flex flex-1 justify-center space-x-8">
+                    <UserNav/>
+                </div>
                 </div>
             </div>
         </Container>

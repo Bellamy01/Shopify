@@ -6,11 +6,12 @@ const UserNav:FC = ()=>{
     return (
         <nav>
             <ul className={s.item}>
-                <li className={s.list}>Cart</li>
+                <li className={s.item}>Cart</li>
+                <li className={s.item}>
                 <Link href="/">
-                    <li className={s.list}>Wishlist</li>
+                    <a>Wishlist</a>
                 </Link>
-
+                </li>
             </ul>
         </nav>
     )
