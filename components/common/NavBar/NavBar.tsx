@@ -8,9 +8,27 @@ const NavBar = ()=>{
         <Container>
             <div className={s.root}>
                 <div className={s.main}>
-
+                    <Link href="/">
+                    <a className={s.logo}>
+                        bel store
+                    </a>
+                </Link>
+                <nav className={s.nav}>
+                    <Link href="/">
+                        <a className={s.link}>All</a>
+                    </Link>
+                    <Link href="/">
+                        <a className={s.link}>Clothes</a>
+                    </Link>
+                    <Link href="/">
+                        <a className={s.link}>Accessories</a>
+                    </Link>
+                    <Link href="/">
+                        <a className={s.link}>Shoes</a>
+                    </Link>
+                </nav>
                 </div>
-                
+            </div>
         </Container>
     )
 }

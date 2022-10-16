@@ -2,11 +2,17 @@
     @apply flex flex-row md:py-6;
 }
 .link{
-    @apply text-accents-6 leading-6 font-medium transition;
+    @apply text-accents-6 leading-6 font-medium transition capitalize;
     &:hover{
         @apply text-accents-9;
     }
 }
 .logo{
-    @apply text-2xl font-bold;
+    @apply text-2xl font-bold uppercase;
+}
+.main{
+    @apply flex flex-1 items-center;
+}
+.nav{
+    @apply ml-6 space-x-6;
 }
