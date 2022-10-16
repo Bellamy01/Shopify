@@ -5,7 +5,9 @@
     margin-bottom: 100px;
     @apply bg-black;
 }
-
+.seconday{
+    @apply bg-white;
+}
 .container{
     @apply flex flex-row;
 

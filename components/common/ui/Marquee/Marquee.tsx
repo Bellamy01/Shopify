@@ -10,7 +10,9 @@ interface Props {
 const Marquee : FC<Props> = ({children,variant = "primary"})=>{
     const rootClassName = cn(
         s.root,
-        {}
+        { 
+            [s.secondary] : variant === "secondary"
+        }
     )
     return (
         <div className={s.root}>
