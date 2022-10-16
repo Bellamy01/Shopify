@@ -15,7 +15,7 @@ const Marquee : FC<Props> = ({children,variant = "primary"})=>{
         }
     )
     return (
-        <div className={s.root}>
+        <div className={rootClassName}>
             <div className={s.loop}>
                     <div className={s.container}>
                         {children}

@@ -32,7 +32,6 @@ const ProductCard: FC<Props> = ({product,variant= "simple"})=> {
                             width = {280}
                             quality = "85"
                             layout = "responsive"
-                            SI
                             />
                         )}
                     </> : (
