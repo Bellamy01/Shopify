@@ -1,15 +1,16 @@
-import { FC,ReactNode, useContext } from "react";
-import { createContext } from "vm";
+import { FC,ReactNode} from "react";
+import { createContext,useContext } from "react";
 
-interface Props {
-    children:ReactNode[]
-}
+
 const UIContext =  createContext({
     uiState:"defaultState"
 })
+interface Props{
+    children:ReactNode
+}
 
 
-export const UIProvider:FC<Props> = ({children})=>{
+export const UIProvider:FC<Props>= ({children})=>{
     return(
         <UIContext.Provider value={{uiState:"someState"}}>
             {children}
