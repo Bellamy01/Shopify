@@ -2,8 +2,27 @@ import { FC,ReactNode} from "react";
 import { createContext,useContext, useState } from "react";
 
 
-const UIContext =  createContext<{[key:string]:any}>({
-    uiState:"defaultState"
+export interface StateModifiers{
+    openSideBar: ()=>void,
+    closeSideBar: ()=>void
+}
+
+export interface StateValues{
+    isSideBarOpen: boolean
+}
+
+const stateModifiers = {
+    openSideBar: ()=>{},
+    closeSideBar: ()=>{}
+}
+
+const initialState = {isSideBarOpen: false}
+
+type State = StateValues & StateModifiers
+const UIContext =  createContext<State>({
+    openSideBar() {
+        
+    },
 })
 interface Props{
     children:ReactNode
