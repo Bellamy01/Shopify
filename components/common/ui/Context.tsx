@@ -28,7 +28,7 @@ const UIContext =  createContext<State>({
 type Action = { type:"OPEN_SIDEBAR" | "CLOSE_SIDEBAR"};
 
 
-function uiReducer(state:StateValues,action:any){
+function uiReducer(state:StateValues,action:Action){
     switch(action.type){
         case "OPEN_SIDEBAR":{
             return {
