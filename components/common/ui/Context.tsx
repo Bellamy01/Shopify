@@ -1,4 +1,4 @@
-import { FC,ReactNode} from "react";
+import { FC,ReactNode, useMemo} from "react";
 import { createContext,useContext, useState ,useReducer} from "react";
 
 
@@ -56,11 +56,13 @@ export const UIProvider:FC<Props>= ({children})=>{
     const openSideBar = ()=>dispatch({type: "OPEN_SIDEBAR"});
     const closeSideBar = ()=>dispatch({type:"CLOSE_SIDEBAR"});
 
-    const value = {
+    const value = useMemo(()=>{
+        return{
+        ...state,
         openSideBar,
-        closeSideBar,
-        isSideBarOpen: state.isSideBarOpen
-    }
+        closeSideBar
+        }
+    },[state.isSideBarOpen])
     return(
         <UIContext.Provider value={value}>
             {children}
