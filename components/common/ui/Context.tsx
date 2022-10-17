@@ -62,6 +62,7 @@ export const UIProvider:FC<Props>= ({children})=>{
         openSideBar,
         closeSideBar
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[state.isSideBarOpen])
     return(
         <UIContext.Provider value={value}>
