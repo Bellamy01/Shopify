@@ -1,8 +1,8 @@
 import "@assets/main.css";
 import { AppProps } from "next/app";
 import { FC,ReactNode } from "react";
-import { Layout } from "@components/common";
 import { UIProvider ,useUI} from "@components/common/ui/Context";
+import {Layout} from "@components/common";
 
 interface Props{
   children:ReactNode
