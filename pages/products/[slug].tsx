@@ -8,11 +8,7 @@ export const getStaticPaths : GetStaticPaths = async()=>{
     const config = getConfig();
     const {products} = await getAllProductsPaths(config); 
     return {
-        paths:[
-            products.map((el)=>{
-                {params:{ProductSlug.}}
-            })
-        ],
+        paths:products.map(p=>({params:{slug:p.slug}})),
         fallback: false
     }
 }
