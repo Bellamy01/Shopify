@@ -1,12 +1,12 @@
 
 import { InferGetStaticPropsType } from "next";
-import getAllProducts from "@framework/product/get-all-products";
+import {getAllProducts} from "@framework/product";
 import { getConfig } from "@framework/api/config";
 import { Layout } from "@components/common";
 import { ProductCard } from "@components/common/product/ProductCard";
-import Link from "next/link";
-import { Grid, Marquee } from "@components/common/ui";
-import {Hero} from "@components/common/ui";
+import { Grid, Marquee,Hero} from "@components/common/ui";
+
+
 export async function getStaticProps() {
   const config = getConfig();
   const products = await getAllProducts(config );

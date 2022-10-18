@@ -1,8 +1,7 @@
 import { Layout } from "@components/common";
 import { getConfig } from "@framework/api/config";
-import getAllProductsPaths from "@framework/product/get-all-products-paths";
 import { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType } from "next";
-import getProduct from "@framework/product/get-product";    
+import {getProduct,getAllProductsPaths} from "@framework/product";    
 
 
 //fecth all of the product slugs
