@@ -1,20 +1,18 @@
 
 import { InferGetStaticPropsType } from "next";
-import {getAllProducts} from "@framework/product";
+import getAllProducts from "@framework/product/get-all-products";
 import { getConfig } from "@framework/api/config";
 import { Layout } from "@components/common";
 import { ProductCard } from "@components/common/product/ProductCard";
-import { Grid, Marquee,Hero} from "@components/common/ui";
-
-
+import { Grid, Marquee, Hero } from "@components/common/ui";
 export async function getStaticProps() {
   const config = getConfig();
   const products = await getAllProducts(config );
   return {  
     props:{
       products
-    },0
-    revalidate: 4 * 60 * 6
+    },
+    revalidate: 4 * 60 * 60
   }
 }
 
