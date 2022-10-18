@@ -1,19 +1,24 @@
 import { Layout } from "@components/common";
+import { getConfig } from "@framework/api/config";
+import getAllProductsPaths from "@framework/product/get-all-products-paths";
 import { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType } from "next";
 
 //fecth all of the product slugs
 export const getStaticPaths : GetStaticPaths = async()=>{
+    const config = getConfig();
+    const {products} = await getAllProductsPaths(config); 
     return {
         paths:[
-            {params:{slug:"cool-hat"}},
-            {params:{slug:"t-shirt"}},
-            {params:{slug:"lightweight-jacket"}}
+            products.map((el)=>{
+                {params:{ProductSlug.}}
+            })
         ],
         fallback: false
     }
 }
 //provide specific data to the page
-export const getStaticProps = async({params}:GetStaticPropsContext<{slug:string}>)=>{
+export const getStaticProps = async({
+    params}:GetStaticPropsContext<{slug:string}>)=>{
     return{
         props:{
             product:{
@@ -22,7 +27,8 @@ export const getStaticProps = async({params}:GetStaticPropsContext<{slug:string}
         }
     }
 }
-export default function ProductSlug({product}:InferGetStaticPropsType<typeof getStaticProps>){
+export default function ProductSlug({
+    product}:InferGetStaticPropsType<typeof getStaticProps>){
     return(
         <div>
             {product.slug}

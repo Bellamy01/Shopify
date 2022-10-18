@@ -1,10 +1,10 @@
 import { ApiConfig } from "@common/types/api";
-import { Product } from "@framework/schema";
+import { Product } from "@common/types/product";
 
 type ReturnType = {
     products: Pick<Product,"slug">[]
 }
-const  getAllProductPaths = async(config:ApiConfig):Promise<ReturnType> =>{
+const  getAllProductsPaths = async(config:ApiConfig):Promise<ReturnType> =>{
     return {
         products:[
             {slug:"cool-hat"},
@@ -14,4 +14,4 @@ const  getAllProductPaths = async(config:ApiConfig):Promise<ReturnType> =>{
     }
 }
 
-export default getAllProductPaths;
+export default getAllProductsPaths;
