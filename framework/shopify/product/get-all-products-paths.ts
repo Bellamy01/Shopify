@@ -1,5 +1,6 @@
 import { ApiConfig } from "@common/types/api";
 import { Product } from "@common/types/product";
+import { ProductConnection } from "@framework/schema";
 import getAllProductPathsQuery from "@framework/utils/queries/get-all-products-paths";
 
 type ReturnType = {
@@ -7,17 +8,18 @@ type ReturnType = {
 }
 const  getAllProductsPaths = async(config:ApiConfig):Promise<ReturnType> =>{
 
-    const {data} = config.fetch({
+    const {data} = await config.fetch<{products:ProductConnection}>({
         query:getAllProductPathsQuery,
         url:config.apiUrl
     });
-    return {
-        products:[
-            {slug:"cool-hat"},
-            {slug:"t-shirt"},
-            {slug:"lightweight-jacket"}
-        ]
-    }
+    const products = data.products.edges.map(({node:{handle}})=>{
+        return {
+            slug:handle
+        }
+    })
+    console.log(products);
+    
+    return {products};
 }
 
 export default getAllProductsPaths;

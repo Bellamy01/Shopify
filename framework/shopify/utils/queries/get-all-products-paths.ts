@@ -1,6 +1,6 @@
-import { GetAllProductPathsQuery } from "@framework/schema";
 
-const getAllProductQuery = `
+
+const getAllProductPathsQuery = `
     query getAllProductPaths($first: Int = 250){
         products(first:$first){
             edges{
@@ -13,4 +13,4 @@ const getAllProductQuery = `
 `
 
 
-export default GetAllProductPathsQuery;
+export default getAllProductPathsQuery;
