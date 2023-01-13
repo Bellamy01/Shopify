@@ -11,7 +11,7 @@ const NavBar = ()=>{
                 <div className={s.main}>
                     <Link href="/">
                     <a className={s.logo}>
-                        bel store
+                        bella .
                     </a>
                 </Link>
                 <nav className={s.nav}>
