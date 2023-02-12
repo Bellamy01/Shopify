@@ -1,6 +1,7 @@
 export type ApiFetcherOptions = {
     url:string,
-    query:string
+    query:string,
+    variables?: any 
 }
 
 export type ApiFetcheResults<T> = {
@@ -11,4 +12,4 @@ export interface ApiConfig {
     fetch<T>(
         options : ApiFetcherOptions
     ): Promise<{data:T}>
-}
+} 
